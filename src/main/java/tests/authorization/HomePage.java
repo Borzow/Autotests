@@ -6,19 +6,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-public class WindowAuthorization {
+public class HomePage {
     WebDriver driver;
     WebDriverWait wait;
 
-    public WindowAuthorization(WebDriver driver) {
+    public HomePage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = wait;
     }
-    public void start(){
+
+    public void start() {
         driver.get("https://www.kaspersky.ru/");
     }
+
     public void dropBox() { // придумать название
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class=\"AccesibilityButton_button__2QjPj AlreadyCustomer_button__X0UTa\"]")));
         WebElement dropBox = driver.findElement(By.xpath("//button[@class=\"AccesibilityButton_button__2QjPj AlreadyCustomer_button__X0UTa\"]"));
