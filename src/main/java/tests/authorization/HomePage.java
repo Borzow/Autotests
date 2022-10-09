@@ -25,7 +25,7 @@ public class HomePage {
         dropBox.click();
     }
 
-    public void MyKButton() {
+    public void myKButton() {
         WebElement MyK = driver.findElement(By.xpath("//a[@href=\"https://my.kaspersky.com/\"]"));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href=\"https://my.kaspersky.com/\"]")));
         MyK.click();
